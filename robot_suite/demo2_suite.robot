@@ -16,6 +16,9 @@ TC1
     Log To Console      ${COLORS}[0]
 
 TC2
-    FOR     ${i}    IN   @{COLORS}
-        Log To Console      ${i}
+    ${count}    Get Length      ${COLORS}
+    Log To Console      ${count}
+
+    FOR     ${i}    IN RANGE    0      ${count}    1
+        Log To Console      ${COLORS}[${i}]
     END
