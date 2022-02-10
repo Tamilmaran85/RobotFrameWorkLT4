@@ -16,6 +16,6 @@ TC1
     Log To Console      ${COLORS}[0]
 
 TC2
-    FOR     ${ROBOT}    IN   @{COLORS}
-        Log To Console      ${ROBOT}
+    FOR     ${i}    IN   @{COLORS}
+        Log To Console      ${i}
     END
