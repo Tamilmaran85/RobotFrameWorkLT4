@@ -1,26 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20220209 09:47:11.572" schemaversion="2" generator="Robot 4.1.3 (Python 2.7.14 on win32)">
-<suite source="C:\Users\CTEA\PycharmProjects\robot_project\selenium_suite" id="s1" name="Selenium Suite">
-<suite source="C:\Users\CTEA\PycharmProjects\robot_project\selenium_suite\orange_hrm_suite.robot" id="s1-s1" name="Orange Hrm Suite">
-<test id="s1-s1-t1" name="TC1 Valid Login">
-<kw name="Append To Environment Variable" library="OperatingSystem">
-<arg>path</arg>
-<arg>${EXECDIR}\\Driver</arg>
-<doc>Appends given ``values`` to environment variable ``name``.</doc>
-<msg timestamp="20220209 09:47:11.650" level="INFO">Environment variable 'path' set to value 'C:\Python38\;C:\Python38\Scripts\;C:\Python27\;C:\Python27\Scripts\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Toshiba\Bluetooth Toshiba Stack\sys\;C:\Program Files (x86)\Toshiba\Bluetooth Toshiba Stack\sys\x64\;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\TortoiseSVN\bin;C:\Users\CTEA\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\CTEA\AppData\Local\Programs\Python\Python38\;C:\Program Files (x86)\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2021.3.2\bin;;c:\python27\lib\site-packages\pywin32_system32;C:\Users\CTEA\PycharmProjects\robot_project\Driver'.</msg>
-<status status="PASS" endtime="20220209 09:47:11.650" starttime="20220209 09:47:11.649"/>
-</kw>
+<robot rpa="false" generated="20220210 08:07:47.605" schemaversion="2" generator="Robot 4.1.3 (Python 2.7.14 on win32)">
+<suite source="C:\Users\CTEA\PycharmProjects\robot_project\selenium_suite\openemr_suite.robot" id="s1" name="Openemr Suite">
+<test id="s1-t1" name="TC1 Valid Login">
 <kw name="Open Browser">
-<arg>url=https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html</arg>
+<arg>url=https://demo.openemr.io/b/openemr/index.php</arg>
 <arg>browser=chrome</arg>
-<msg timestamp="20220209 09:47:11.656" level="FAIL">No keyword with name 'Open Browser' found.</msg>
-<status status="FAIL" endtime="20220209 09:47:11.656" starttime="20220209 09:47:11.656"/>
+<arg>executable_path=${EXECDIR}/Driver/chromedriver</arg>
+<msg timestamp="20220210 08:07:47.693" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20220210 08:07:47.693" starttime="20220210 08:07:47.692"/>
 </kw>
-<status status="FAIL" endtime="20220209 09:47:11.658" starttime="20220209 09:47:11.648">No keyword with name 'Open Browser' found.</status>
+<kw name="Maximize Browser Window">
+<status status="NOT RUN" endtime="20220210 08:07:47.701" starttime="20220210 08:07:47.701"/>
+</kw>
+<kw name="Set Selenium Implicit Wait">
+<arg>30s</arg>
+<status status="NOT RUN" endtime="20220210 08:07:47.708" starttime="20220210 08:07:47.707"/>
+</kw>
+<kw name="Input Text">
+<arg>id=authUser</arg>
+<arg>admin</arg>
+<status status="NOT RUN" endtime="20220210 08:07:47.715" starttime="20220210 08:07:47.714"/>
+</kw>
+<kw name="Input Password">
+<arg>id=clearPass</arg>
+<arg>pass</arg>
+<status status="NOT RUN" endtime="20220210 08:07:47.723" starttime="20220210 08:07:47.722"/>
+</kw>
+<kw name="select From List By Lable">
+<arg>name=languageChoice</arg>
+<arg>English (Indian)</arg>
+<status status="NOT RUN" endtime="20220210 08:07:47.729" starttime="20220210 08:07:47.729"/>
+</kw>
+<kw name="Click Element">
+<arg>xpath=//button[@type='submit']</arg>
+<status status="NOT RUN" endtime="20220210 08:07:47.736" starttime="20220210 08:07:47.736"/>
+</kw>
+<kw name="Get Title">
+<var>${title}</var>
+<status status="NOT RUN" endtime="20220210 08:07:47.742" starttime="20220210 08:07:47.742"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${title}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" endtime="20220210 08:07:47.743" starttime="20220210 08:07:47.743"/>
+</kw>
+<kw name="Title Should Be">
+<arg>OpenEMR</arg>
+<status status="NOT RUN" endtime="20220210 08:07:47.751" starttime="20220210 08:07:47.751"/>
+</kw>
+<kw name="Close Browser">
+<status status="NOT RUN" endtime="20220210 08:07:47.757" starttime="20220210 08:07:47.757"/>
+</kw>
+<status status="FAIL" endtime="20220210 08:07:47.759" starttime="20220210 08:07:47.686">No keyword with name 'Open Browser' found.</status>
 </test>
-<status status="FAIL" endtime="20220209 09:47:11.661" starttime="20220209 09:47:11.619"/>
-</suite>
-<status status="FAIL" endtime="20220209 09:47:11.666" starttime="20220209 09:47:11.577"/>
+<status status="FAIL" endtime="20220210 08:07:47.763" starttime="20220210 08:07:47.612"/>
 </suite>
 <statistics>
 <total>
@@ -29,12 +62,11 @@
 <tag>
 </tag>
 <suite>
-<stat fail="1" skip="0" id="s1" name="Selenium Suite" pass="0">Selenium Suite</stat>
-<stat fail="1" skip="0" id="s1-s1" name="Orange Hrm Suite" pass="0">Selenium Suite.Orange Hrm Suite</stat>
+<stat fail="1" skip="0" id="s1" name="Openemr Suite" pass="0">Openemr Suite</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20220209 09:47:11.624" level="ERROR">Error in file 'C:\Users\CTEA\PycharmProjects\robot_project\selenium_suite\orange_hrm_suite.robot' on line 2: Importing library 'SeleniumLibrary' failed: ImportError: No module named SeleniumLibrary
+<msg timestamp="20220210 08:07:47.679" level="ERROR">Error in file 'C:\Users\CTEA\PycharmProjects\robot_project\selenium_suite\openemr_suite.robot' on line 2: Importing library 'SeleniumLibrary' failed: ImportError: No module named SeleniumLibrary
 Traceback (most recent call last):
   None
 PYTHONPATH:
